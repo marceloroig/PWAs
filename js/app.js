@@ -1,6 +1,15 @@
+//Validacion del Proyecto
+var url = windows.location.href;
+var swLocation = '/PWAs/sw.js'
+
 //Registro del Service Worker
 if(navigator.serviceWorker ) {
-    navigator.serviceWorker.register('sw.js');
+
+    if (url.includes('localhost') ){
+        swLocation = 'sw.js'; //si esta en la raiz debe ser /sw.js
+    }
+
+    navigator.serviceWorker.register( swLocation);
 }
 
 
