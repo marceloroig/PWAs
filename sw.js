@@ -1,12 +1,12 @@
 
 importScripts('js/sw-utils.js')
 
-const STATIC_CACHE      = 'static-v2';
+const STATIC_CACHE      = 'static-v3';
 const DYNAMIC_CACHE     = 'dynamic-v1';
 const INMUTABLE_CACHE   = 'inmutable-v1';
 
 //Aqui guardaremos los elementos estaticos, pero solo los que nosostros los desrrollamos, osea que podamos modificarlos con el tiempo.
-const APP_SHELL = [
+const APP_SHELL = [ //STATIC_CACHE
    // '/',
     'index.html',
     'css/style.css',
